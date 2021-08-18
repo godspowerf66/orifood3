@@ -1,0 +1,183 @@
+.header {
+    background-color: $color-primary-light-1;
+    grid-column: full-start / col-end 5;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: full-start / full-end;
+    }
+
+    padding: 9rem;
+    padding-top: 5rem;
+
+    @media only screen and (max-width: $bp-smaller) {
+          padding: 4.5rem;
+          padding-top: 3rem;
+    }
+
+    display: grid;
+    grid-template-rows: -webkit-max-content minmax(-webkit-min-content, 1fr) -webkit-max-content 1fr;
+    grid-template-rows: max-content minmax(min-content, 1fr) max-content 1fr;
+    grid-template-columns: minmax(-webkit-min-content, -webkit-max-content);
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 3rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+/*&__content {
+    background-color: $color-primary-light-1;
+    grid-column: full-start / col-end 5;
+}*/ 
+
+.btn-cta {
+    display: grid;
+    grid-template-columns: repeat(2, -webkit-max-content);
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: 3.5rem;
+    //margin-bottom: 1rem;
+
+    .btn,
+    .btn-white {
+        -ms-flex-item-align: start;
+            align-self: start;
+    }
+}
+
+.recommend {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+
+    @media only screen and (max-width: $bp-small) {
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+    
+    &__friends {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    &__photo {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        border: 3px solid $color-primary-light-1;
+        -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+        
+        &:not(:first-of-type) {
+            margin-left: -1.4rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+        
+        @media only screen and (max-width: $bp-small) {
+            width:4.5rem;
+            height: 4.5rem;
+        }
+    }
+
+    &__count {
+        font-size: 1.6rem;
+        font-weight: 600;
+
+        span {
+            color: $color-primary;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 1.3rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.15rem;
+        }
+    }
+}
+
+.header-img {
+    background-color: $color-primary-light-1;
+    grid-column: col-start 6 / full-end;
+    padding: 2rem;
+    padding-top: 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: full-start / full-end;
+        padding: 0 8rem 4rem 8rem;
+    }
+}
+
+.composition {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: end;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__photo {
+        border-radius: $br-small;
+        -o-object-fit: cover;
+           object-fit: cover;
+        z-index: 10;
+
+        -webkit-transition: all .2s;
+
+        -o-transition: all .2s;
+
+        transition: all .2s;
+        outline-offset: 2rem;
+
+        &--p1 {
+            max-width: 100%;
+            grid-column: 2 / span 2;
+            grid-row: 1 / span 4;
+        }
+
+        &--p2 {
+            max-width: 100%;
+            grid-column: 3 / span 2;
+            grid-row: 2 / span 3;
+            align-self: center;
+            justify-self: end;
+        }
+
+        &--p3 {
+            max-width: 100%;
+            grid-column: 1 / span 3;
+            grid-row: 3 / span 2;
+            align-self: center;
+        }
+
+        &:hover {
+            outline: 1.5rem solid $color-primary;
+            -webkit-transform: scale(1.05) translateY(-.5rem);
+                -ms-transform: scale(1.05) translateY(-.5rem);
+                    transform: scale(1.05) translateY(-.5rem);
+            -webkit-box-shadow: $shadow-box;
+                    box-shadow: $shadow-box;
+            z-index: 20;
+        }
+    }
+
+    &:hover &:__photo:not(:hover) {
+        -webkit-transform: scale(.95);
+            -ms-transform: scale(.95);
+                transform: scale(.95);
+    }
+}
+

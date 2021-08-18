@@ -1,0 +1,131 @@
+.meals-section {
+    //background-color: royalblue;
+    grid-column: center-start / center-end;
+    //background-color: $color-grey-light-1;
+
+    margin: 5rem 0;
+    //padding: 3rem 14.5rem 8rem 14.5rem;
+}
+
+/*.meals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+}*/  
+
+.meal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+
+    @media only screen and (max-width: $bp-smaller) {
+        grid-template-columns: repeat(2, 1fr);  
+    }
+    
+
+    &__card {
+        background-color: #fff;
+
+        display: grid;
+        grid-template-rows: 1fr repeat(5, 4rem);
+
+        align-self: start;
+        -webkit-box-shadow: $shadow-box;
+                box-shadow: $shadow-box;
+    }
+
+    &__img {
+        width: 100%;
+        border-top-left-radius: $br-medium;
+        border-top-right-radius: $br-medium;
+    }
+
+    &__header {
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+        margin-left: 12%;
+        font-size: 1.15rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    &__calories,
+    &__nutriscore,
+    &__rating {
+        font-size: 1.6rem;
+        margin-left: 12%;
+
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    &__calories {
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: $color-primary-light-3;
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__nutriscore {
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: $color-primary-light-3;
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__rating {
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: $color-primary-light-3;
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__diet {
+        @media only screen and (max-width: $bp-smaller) {
+            grid-column: 1 / -1;  
+        }
+
+        &--wrap {
+            @media only screen and (max-width: $bp-smaller) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 1.5rem;  
+            }
+        }
+
+        &-list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            margin-bottom: 2.5rem;
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                fill: $color-primary-light-3;
+                margin-right: 1.5rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    } 
+}

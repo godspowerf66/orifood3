@@ -1,0 +1,177 @@
+.pricing {
+    //background-color: salmon;
+    grid-column: center-start / center-end;
+
+    margin: 8rem 0 4rem 0;
+
+    &__details {
+        /*display: flex;
+        justify-content: space-evenly;*/
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 5rem;
+    }
+
+    &__card {
+        padding: 3rem 6rem;
+        -webkit-box-shadow: $shadow-box;
+                box-shadow: $shadow-box;
+        border-radius: $br-small;
+        position: relative;
+        overflow: hidden;
+        //align-items: center;
+        //justify-items: center;
+
+        @media only screen and (max-width: $bp-smaller) {
+              padding: 2rem 1.5rem;
+        }
+
+        &--top {
+            position: absolute;
+            background-color: $color-tertiary-dark;
+            width: 16rem;
+            padding: .8rem 1.5rem;
+            right: -12%;
+            -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+
+            @media only screen and (max-width: $bp-smaller) {
+                right: -21.5%;
+                width: 13rem;
+                padding: .5rem 1.2rem;  
+            }
+        }
+
+        &--value {
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+
+            @media only screen and (max-width: $bp-smaller) {
+                font-size: 1rem;
+            }
+        }
+
+        &--heading {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        &--amount {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+
+            span { 
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+
+        &--text {
+            font-size: 1.2rem;
+        }
+
+        &--1 {
+            background-color: #fff;
+            justify-self: end;
+        }
+
+        &--2 {
+           background-color: $color-primary-light-1; 
+           justify-self: start;
+        }
+
+        &--list {
+            margin-bottom: 3.5rem;
+        }
+
+        &--features {
+            list-style-type: none;
+            font-size: 1.4rem;
+            
+            @media only screen and (max-width: $bp-smaller) {
+                font-size: 1.15rem;
+            }
+
+            &-item {
+
+                &:not(:last-of-type) {
+                    margin-bottom: 2.5rem;
+
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 1rem;
+                        height: 1rem;
+                        margin-right: .8rem;
+
+                        @supports((-webkit-mask-image: url()) or (mask-image: url())) {
+                            background-color: $color-primary;
+                            -webkit-mask-image: url(../img/SVG/check.svg);
+                            -webkit-mask-size: cover; 
+
+                            mask-image: url(../img/SVG/check.svg);
+                            mask-size: cover;
+                            background-image: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--last1 {
+            
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 1rem;
+                height: 1rem;
+                margin-right: .8rem;
+
+                @supports((-webkit-mask-image: url()) or (mask-image: url())) {
+                    background-color: $color-primary;
+                    -webkit-mask-image: url(../img/SVG/cross.svg);
+                    -webkit-mask-size: cover; 
+
+                    mask-image: url(../img/SVG/cross.svg);
+                    mask-size: cover;
+                    background-image: none;
+                }
+            }
+        }
+
+        &--last2 {
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 1rem;
+                height: 1rem;
+                margin-right: .8rem;
+
+                @supports((-webkit-mask-image: url()) or (mask-image: url())) {
+                    background-color: $color-primary;
+                    -webkit-mask-image: url(../img/SVG/check.svg);
+                    -webkit-mask-size: cover; 
+
+                    mask-image: url(../img/SVG/check.svg);
+                    mask-size: cover;
+                    background-image: none;
+                }
+            }
+        }
+    }
+
+    &__text {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-top: 6rem;
+
+        @media only screen and (max-width: $bp-smaller) {
+            text-align: start;
+            line-height: $line-height-paragraph-default;  
+        }
+    } 
+}

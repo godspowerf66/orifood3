@@ -1,0 +1,154 @@
+.heading-1 {
+    font-size: 5.4rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 6rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 4.5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 4rem;
+    }
+}
+
+.heading-2 {
+    font-size: 3.5rem;
+
+    @media only screen and (max-width: $bp-smaller) {
+        font-size: 2.6rem;
+    }
+}
+
+.heading-3 {
+    font-size: 1.4rem;
+    color: $color-primary-dark-1;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.heading-4 {
+    font-size: 2rem;
+    font-weight: 600;
+
+    @media only screen and (max-width: $bp-smaller) {
+        line-height: $line-height-medium;  
+    }
+}
+
+.header {
+
+    &__paragraph {
+        font-size: 1.7rem;
+        line-height: $line-height-paragraph-default;
+    }
+}
+
+.btn:link,
+.btn:visited {
+    color: $color-primary-light-1;
+    background-color: $color-primary;
+    border-radius: $br-small;
+    display: inline-block;
+    padding: 1rem 1.3rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: $font-primary;
+    
+    @media only screen and (max-width: $bp-smaller) {
+        padding: .8rem 1rem;
+        font-size: 1.4rem;  
+    }
+}
+
+.btn-text {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: $font-primary;
+    font-weight: 600;
+}
+
+.btn-white:link,
+.btn-white:visited {
+    color: $color-grey-dark-1;
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: $font-primary; 
+    border-radius: $br-small;
+    display: inline-block;
+    padding: 1rem 1.3rem;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+
+    @media only screen and (max-width: $bp-smaller) {
+        padding: .8rem 1rem;
+        font-size: 1.4rem;  
+    }
+
+    span {
+        margin-left: 3px;
+        -webkit-transition: -webkit-transform .2s;
+        transition: -webkit-transform .2s;
+        -o-transition: transform .2s;
+        transition: transform .2s;
+        transition: transform .2s, -webkit-transform .2s;
+    }
+
+    &:hover,
+    &:active {
+
+        span {
+            -webkit-transform: translateY(8px);
+                -ms-transform: translateY(8px);
+                    transform: translateY(8px);
+        }
+    }
+}
+
+.btn-secondary:link,
+.btn-secondary:visited {
+    font-size: 1.6rem;
+    font-family: $font-primary;
+    text-decoration: none;
+    display: inline-block;
+    padding: .8rem 1.2rem;
+    color: $color-primary;
+    margin-top: 3rem;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s; 
+
+    span {
+        margin-left: 3px;
+        -webkit-transition: margin-left .2s;
+        -o-transition: margin-left .2s;
+        transition: margin-left .2s;
+    }
+
+    &:hover,
+    &:active {
+
+        span {
+            margin-left: 8px;
+        }
+    }
+}
+
+.center-link {
+    text-align: center;
+}
+
+.btn-tertiary {
+    border: none;
+    padding: 1.2rem .5rem;
+    font-size: 1.5rem;
+    color: $color-grey-light-1;
+    border-radius: $br-small;
+    width: 100%;
+    background-color: $color-primary-dark-3;
+    cursor: pointer;
+}
